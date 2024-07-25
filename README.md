@@ -8,7 +8,8 @@ This repository hosts the paper list from the paper "Authorship Attribution in t
 
 ## Table of Content
 - [Overview](#overview)
-- [Key Problems in Authorship Attribution](#key-problems-in-authorship-attribution)
+- [Benchmarks and Detectors](#benchmarks-and-detectors)
+- [Paper List](#paper-list)
   - [1. Human-written Text Attribution](#1-human-written-text-attribution)
   - [2. LLM-generated Text Detection](#2-llm-generated-text-detection)
   - [3. LLM-generated Text Attribution](#3-llm-generated-text-attribution)
@@ -18,12 +19,60 @@ This repository hosts the paper list from the paper "Authorship Attribution in t
 - [License](#license)
 - [Contact](#contact)
 
+## Benchmarks and Detectors
+The table below is a summary of Authorship Attribution Datasets and Benchmarks with LLM-Generated Text. Size is shown as the sum of LLM-generated and human-written texts (with the percentage of human-written texts in parentheses). Language is displayed using the two-letter ISO 639 abbreviation. Columns P2, P3, and P4 indicate whether the dataset supports problems described in Problem 2, 3, and 4, respectively.
+| Name             | Domain                                                                                  | Size               | Length                                | Language                                   | Model                                                                                | P2  | P3  | P4  |
+| :--------------- | :-------------------------------------------------------------------------------------- | :----------------- | :------------------------------------ | :----------------------------------------- | :----------------------------------------------------------------------------------- | :-: | :-: | :-: |
+| [TuringBench](https://arxiv.org/pdf/2109.13296)      | News                                                                                    | 168,612 (5\.2%)    | 100 to 400 words                      | en                                         | GPT-1,2,3, GROVER, CTRL, XLM, XLNET, FAIR, TRANSFORMER-XL, PPLM                      | ✓   | ✓   |     |
+| [TweepFake](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251415)        | Social media                                                                            | 25,572 (50\.0%)    | less than 280 characters              | en                                         | GPT-2, RNN, Markov, LSTM, CharRNN                                                    | ✓   |     |     |
+| [ArguGPT](https://arxiv.org/abs/2304.07666)          | Academic essays                                                                         | 8,153 (49\.5%)     | 300 words on average                  | en                                         | GPT2-Xl, text-babbage-001, text-curie-001, davinci-001,002,003, GPT-3\.5-Turbo       | ✓   |     |     |
+| [AuTexTification](https://arxiv.org/abs/2309.11285)  | Tweets, reviews, news, legal, and how-to articles                                       | 163,306 (42\.5%)   | 20 to 100 tokens                      | en, es                                     | BLOOM, GPT-3                                                                         | ✓   | ✓   |     |
+| [CHEAT](https://arxiv.org/pdf/2304.12008)            | Academic paper abstracts                                                                | 50,699 (30\.4%)    | 163\.9 words on average               | en                                         | ChatGPT                                                                              | ✓   |     |     |
+| [GPABench2](https://arxiv.org/abs/2306.05524)        | Academic paper abstracts                                                                | 2\.385M (6.3%)     | 70 to 350 words                       | en                                         | ChatGPT                                                                              | ✓   |     | ✓   |
+| [Ghostbuster](https://arxiv.org/pdf/2305.15047)      | News, student essays, creative writing                                                  | 23,091 (87\.0%)    | 77 to 559 (median words per document) | en                                         | ChatGPT, Claude                                                                      | ✓   |     |     |
+| [HC3](https://arxiv.org/abs/2301.07597)              | Reddit, Wikipedia, medicine, finance                                                    | 125,230 (64\.5%)   | 25 to 254 words                       | en, zh                                     | ChatGPT                                                                              | ✓   |     |     |
+| [HC3 Plus](https://arxiv.org/abs/2309.02731)         | News, social media                                                                      | 214,498            | N/A                                   | en, zh                                     | ChatGPT                                                                              | ✓   |     |     |
+| [HC-Var](https://arxiv.org/pdf/2310.01307)           | News, reviews, essays, QA                                                               | 144k (68\.8%)      | 50 to 200 words                       | en                                         | ChatGPT                                                                              | ✓   |     |     |
+| [HANSEN](https://arxiv.org/abs/2310.16746)           | Transcripts of speech (spoken text), statements (written text)                          | 535k (96\.1%)      | less than 1k tokens                   | en                                         | ChatGPT, PaLM2, Vicuna-13B                                                           | ✓   | ✓   |     |
+| [M4](https://arxiv.org/pdf/2305.14902)               | Wikipedia, WikiHow, Reddit, QA, news, paper abstracts, peer reviews                     | 147,895 (24\.2%)   | more than 1k characters               | ar, bg, en, id, ru, ur, zh                 | davinci-003, ChatGPT, GPT-4, Cohere, Dolly2, BLOOMz                                  | ✓   |     |     |
+| [MGTBench](https://arxiv.org/pdf/2303.14822)         | News, student essays, creative writing                                                  | 21k (14\.3%)       | 1 to 500 words                        | en                                         | ChatGPT, ChatGLM, Dolly, GPT4All, StableLM, Claude                                   | ✓   | ✓   |     |
+| [MULTITuDE](https://arxiv.org/pdf/2310.13606)        | News                                                                                    | 74,081 (10\.8%)    | 200 to 512 tokens                     | ar, ca, cs, de, en, es, nl, pt, ru, uk, zh | GPT-3,4, ChatGPT, Llama-65B, Alpaca-LoRa-30B, Vicuna-13B, OPT-66B, OPT-IML-Max-1\.3B | ✓   |     |     |
+| [OpenGPTText](https://arxiv.org/pdf/2305.07969)      | OpenWebText                                                                             | 58,790 (50\.0%)    | less than 2k words                    | en                                         | ChatGPT                                                                              | ✓   |     |     |
+| [OpenLLMText](https://arxiv.org/abs/2311.08723)      | OpenWebText                                                                             | 344,530 (20%)      | 512 tokens                            | en                                         | ChatGPT, PaLM, Llama, GPT2-XL                                                        | ✓   | ✓   |     |
+| [Scientic Paper](https://aclanthology.org/2023.trustnlp-1.17/)   | Scientific papers                                                                       | 29k (55\.2%)       | 900 tokens on average                 | en                                         | SCIgen, GPT-2,3, ChatGPT, Galactica                                                  | ✓   |     |     |
+| [RAID](https://arxiv.org/abs/2405.07940)             | News, Wikipedia, paper abstracts, recipes, Reddit, poems, book summaries, movie reviews | 523,985 (2\.9%)    | 323 tokens on average                 | cs, de, en                                 | GPT-2,3,4, ChatGPT, Mistral-7B, MPT-30B, Llama2-70B, Cohere command and chat         | ✓   |     |     |
+| [M4GT-Bench](https://arxiv.org/abs/2402.11175)       | Wikipedia, Wikihow, Reddit, arXiv abstracts, academic paper reviews, student essays     | 5,368,998 (96\.6%) | more than 50 characters               | ar, bg, de, en, id, it, ru, ur, zh         | ChatGPT, davinci-003, GPT-4, Cohere, Dolly-v2, BLOOMz                                | ✓   | ✓   | ✓   |
+| [MAGE](https://arxiv.org/abs/2305.13242)             | Reddit, reviews, news, QA, story writing, Wikipedia, academic paper abstracts           | 448,459 (34\.4%)   | 263 words on average                  | en                                         | GPT, Llama, GLM-130B, FLAN-T5 OPT, T0, BLOOM-7B1, GPT-J-6B, GPT-NeoX-2               | ✓   |     |     |
+| [MIXSET](https://aclanthology.org/2024.findings-naacl.29/)           | Email, news, game reviews, academic paper abstracts, speeches, blogs                    | 3\.6k (16.7%)      | 50 to 250 words                       | en                                         | GPT-4, Llama2                                                                        | ✓   |     | ✓   |
 
-## Key Problems in Authorship Attribution
+
+
+
+The Table below present an overview of LLM-Generated Text Detectors.
+| Detector               | Price                                                 | API | Website                                                             |
+| :--------------------- | :---------------------------------------------------- | :-- | :------------------------------------------------------------------ |
+| GPTZero                | 150k words at $10/month, 10k words for free per month | Yes | https://gptzero.me/                                                 |
+| ZeroGPT                | 100k characters for $9\.99, 15k characters for free   | Yes | https://www.zerogpt.com/                                            |
+| Sapling                | 50k characters for $25, 2k characters for free        | Yes | https://sapling.ai/ai-content-detector                              |
+| Originality.AI         | 200k words at $14\.95/month                           | Yes | https://originality.ai/                                             |
+| CopyLeaks              | 300k words at $7\.99/month                            | Yes | https://copyleaks.com/ai-content-detector                           |
+| Winston                | 80k words at $12/month                                | Yes | https://gowinston.ai/                                               |
+| GPT Radar              | $0\.02/100 tokens                                     | N/A | https://gptradar.com/                                               |
+| Turnitin’s AI detector | License  required                                     | N/A | https://www.turnitin.com/solutions/topics/ai-writing/ai-detector/   |
+| GPT-2 Output Detector  | Free                                                  | N/A | https://github.com/openai/gpt-2-output-dataset/tree/master/detector |
+| Crossplag              | Free                                                  | N/A | https://crossplag.com/ai-content-detector/                          |
+| CatchGPT               | Free                                                  | N/A | https://www.catchgpt.ai/                                            |
+| Quil.org               | Free                                                  | N/A | https://aiwritingcheck.org/                                         |
+| Scribbr                | Free                                                  | N/A | https://www.scribbr.com/ai-detector/                                |
+| Draft Goal             | Free                                                  | N/A | https://detector.dng.ai/                                            |
+| Writefull              | Free                                                  | Yes | https://x.writefull.com/gpt-detector                                |
+| Phrasly                | Free                                                  | Yes | https://phrasly.ai/ai-detector                                      |
+| Writer                 | Free                                                  | Yes | https://writer.com/ai-content-detector/                             |
+
+
+## Paper List
 
 ### 1. Human-written Text Attribution
-- **ALISON: Fast and Effective Stylometric Authorship Obfuscation.** Eric Xing, Saranya Venkatraman, Thai Le, and Dongwon Lee. *arXiv preprint arXiv:2402.00835* (2024) [[link]](https://ojs.aaai.org/index.php/AAAI/article/download/29901/31575)
-
 - **Who could be behind QAnon? Authorship attribution with supervised machine-learning.** Florian Cafiero, and Jean-Baptiste Camps. *arXiv preprint arXiv:2303.02078* (2023) [[link]](https://arxiv.org/pdf/2303.02078)
 
 - **PART: Pre-trained Authorship Representation Transformer.** Javier Huertas-Tato, Alvaro Huertas-Garcia, Alejandro Martin, and David Camacho. *arXiv preprint arXiv:2209.15373* (2022) [[link]](https://arxiv.org/pdf/2209.15373)
@@ -189,6 +238,7 @@ This repository hosts the paper list from the paper "Authorship Attribution in t
 
 ### 2. LLM-generated Text Detection
 - **Paraphrasing evades detectors of ai-generated text, but retrieval is an effective defense.** Kalpesh Krishna, Yixiao Song, Marzena Karpinska, John Wieting, and Mohit Iyyer. *Advances in Neural Information Processing Systems* (2024) [[link]](https://proceedings.neurips.cc/paper_files/paper/2023/file/575c450013d0e99e4b0ecf82bd1afaa4-Paper-Conference.pdf)
+- **ALISON: Fast and Effective Stylometric Authorship Obfuscation.** Eric Xing, Saranya Venkatraman, Thai Le, and Dongwon Lee. *arXiv preprint arXiv:2402.00835* (2024) [[link]](https://ojs.aaai.org/index.php/AAAI/article/download/29901/31575)
 - **Authorship obfuscation in multilingual machine-generated text detection.** Dominik Macko, Robert Moro, Adaku Uchendu, Ivan Srba, Jason Samuel Lucas, Michiharu Yamashita, Nafis Irtiza Tripto, Dongwon Lee, Jakub Simko, and Maria Bielikova. *arXiv preprint arXiv:2401.07867* (2024) [[link]](https://arxiv.org/pdf/2401.07867)
 - **On the Detectability of ChatGPT Content: Benchmarking, Methodology, and Evaluation through the Lens of Academic Writing.** Zeyan Liu, Zijun Yao, Fengjun Li, and Bo Luo. *No venue* (2024) [[link]](https://ui.adsabs.harvard.edu/abs/2023arXiv230605524L/abstract)
 - **Can Large Language Models Identify Authorship?.** Baixiang Huang, Canyu Chen, and Kai Shu. *arXiv preprint arXiv:2403.08213* (2024) [[link]](https://arxiv.org/abs/2403.08213)
@@ -196,7 +246,7 @@ This repository hosts the paper list from the paper "Authorship Attribution in t
 - **Paraphrasing evades detectors of ai-generated text, but retrieval is an effective defense.** Kalpesh Krishna, Yixiao Song, Marzena Karpinska, John Wieting, and Mohit Iyyer. *Advances in Neural Information Processing Systems* (2024) [[link]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/575c450013d0e99e4b0ecf82bd1afaa4-Abstract-Conference.html)
 - **Spotting LLMs With Binoculars: Zero-Shot Detection of Machine-Generated Text.** Abhimanyu Hans, Avi Schwarzschild, Valeriia Cherepanova, Hamid Kazemi, Aniruddha Saha, Micah Goldblum, Jonas Geiping, and Tom Goldstein. *arXiv preprint arXiv:2401.12070* (2024) [[link]](https://arxiv.org/abs/2401.12070)
 - **Red teaming language model detectors with language models.** Zhouxing Shi, Yihan Wang, Fan Yin, Xiangning Chen, Kai-Wei Chang, and Cho-Jui Hsieh. *Transactions of the Association for Computational Linguistics* (2024) [[link]](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00639/119629)
-- **MAGE: Machine-generated Text Detection in the Wild.** Yafu Li, Qintong Li, Leyang Cui, Wei Bi, Zhilin Wang, Longyue Wang, Linyi Yang, Shuming Shi, and Yue Zhang. *arXiv preprint* (2024) [[link]](https://ui.adsabs.harvard.edu/abs/2023arXiv230513242L/abstract)
+- **MAGE: Machine-generated Text Detection in the Wild.** Yafu Li, Qintong Li, Leyang Cui, Wei Bi, Zhilin Wang, Longyue Wang, Linyi Yang, Shuming Shi, and Yue Zhang. *arXiv preprint arXiv:2305.13242* (2024) [[link]](https://arxiv.org/abs/2305.13242)
 - **Machine-made media: Monitoring the mobilization of machine-generated articles on misinformation and mainstream news websites.** Hans WA Hanley, and Zakir Durumeric. *Proceedings of the International AAAI Conference on Web and Social Media* (2024) [[link]](https://ojs.aaai.org/index.php/ICWSM/article/view/31333)
 - **Few-Shot Detection of Machine-Generated Text using Style Representations.** Rafael Rivera Soto, Kailin Koch, Aleem Khan, Barry Chen, Marcus Bishop, and Nicholas Andrews. *arXiv preprint arXiv:2401.06712* (2024) [[link]](https://arxiv.org/abs/2401.06712)
 
