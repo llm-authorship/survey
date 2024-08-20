@@ -1,10 +1,23 @@
 # Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges
 
 ## Overview
-This repository hosts the paper list from the paper "Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges." This survey presents a comprehensive literature review that examines the latest research on authorship attribution in the era of LLMs. This survey systematically explores the landscape of this field by categorizing four representative problems as shown in the figure bleow.
+This repository hosts the paper list from the paper "Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges." [[arXiv]](https://arxiv.org/abs/2408.08946) [[Project Website]](https://llm-authorship.github.io)
+
+TLDR: This survey presents a comprehensive literature review that examines the latest research on authorship attribution in the era of LLMs. This survey systematically explores the landscape of this field by categorizing four representative problems as shown in the figure bleow.
 
 <img src="https://github.com/authorship-attribution-llm/authorship-llm-survey/blob/main/authorship_intro.png" width=80%>
 
+
+## BibTex
+```
+@article{huang2024authorshipattributionerallms,
+    title   = {Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges},
+    author  = {Baixiang Huang and Canyu Chen and Kai Shu},
+    year    = {2024},
+    journal = {arXiv preprint arXiv: 2408.08946},
+    url     = {https://arxiv.org/abs/2408.08946}, 
+}
+```
 
 ## Table of Content
 - [Overview](#overview)
@@ -395,8 +408,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 We would like to thank the researchers and practitioners whose work has contributed to this survey. This repository aims to serve as a centralized resource for the community interested in authorship attribution in the era of LLMs. -->
 
 ---
-
-For more information, please refer to the full survey paper [here](link-to-paper).
 
 ## Contact
 For any questions or inquiries, please contact [bhuang15@hawk.iit.edu](mailto:bhuang15@hawk.iit.edu).
