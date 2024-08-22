@@ -3,8 +3,11 @@
 ## Overview
 This repository hosts the paper list from the paper "Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges." [[arXiv]](https://arxiv.org/abs/2408.08946) [[Project Website]](https://llm-authorship.github.io)
 
-TLDR: This survey presents a comprehensive literature review that examines the latest research on authorship attribution in the era of LLMs. This survey systematically explores the landscape of this field by categorizing four representative problems as shown in the figure bleow.
+TLDR: This survey paper systematically categorizes authorship attribution in the era of LLMs into four problems: attributing unknown texts to human authors, detecting LLM-generated texts, identifying specific LLMs or human authors, and classifying texts as human, machine, or co-authored by both, while also highlighting key challenges and open problems.
 
+
+As illustrated in figure below, authorship attribution can be systematically categorized into four problems. Each task presents unique challenges that necessitate corresponding solutions. Researchers continually adapt and refine attribution methods, transitioning from human-authored texts to
+LLM-generated content, and navigating the complex interweaving in human-LLM co-authored works.
 <img src="https://github.com/authorship-attribution-llm/authorship-llm-survey/blob/main/authorship_intro.png" width=80%>
 
 
