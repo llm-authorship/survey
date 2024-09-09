@@ -381,6 +381,8 @@ The Table below present an overview of LLM-Generated Text Detectors.
 
 - **Token prediction as implicit classification to identify LLM-generated text.** Yutian Chen, Hao Kang, Vivian Zhai, Liangze Li, Rita Singh, and Bhiksha Raj. *arXiv preprint arXiv:2311.08723* (2023) [[link]](https://arxiv.org/abs/2311.08723)
 
+- **TOPFORMER: Topology-Aware Authorship Attribution of Deepfake Texts with Diverse Writing Styles.** Adaku Uchendu, Thai Le, and Dongwon Lee. *arXiv preprint arXiv:2309.12934* (2023) [[link]](https://arxiv.org/abs/2309.12934)
+
 
 ### 4. Human-LLM Co-authored Text Attribution
 
