@@ -1,7 +1,7 @@
 # Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges
 
 ## Overview
-This repository hosts the paper list from the paper "Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges." [[arXiv]](https://arxiv.org/abs/2408.08946) [[Project Website]](https://llm-authorship.github.io)
+This repository hosts the paper list from the paper "Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges." *ACM SIGKDD Exploration* (2024) [[arXiv]](https://arxiv.org/abs/2408.08946) [[Project Website]](https://llm-authorship.github.io)
 
 TLDR: This survey paper systematically categorizes authorship attribution in the era of LLMs into four problems: attributing unknown texts to human authors, detecting LLM-generated texts, identifying specific LLMs or human authors, and classifying texts as human-authored, machine-generated, or co-authored by both, while also highlighting key challenges and open problems.
 
@@ -222,7 +222,6 @@ The Table below present an overview of LLM-Generated Text Detectors.
 - **Authorship verification as a one-class classification problem.** Moshe Koppel, and Jonathan Schler. *Proceedings of the twenty-first international conference on Machine learning* (2004) [[link]](https://icml.cc/Conferences/2004/proceedings/papers/415.pdf)
 
 - **Author identification, idiolect, and linguistic uniqueness.** Malcolm Coulthard. *Applied linguistics* (2004) [[link]](https://publications.aston.ac.uk/id/eprint/1928/1/A_AppLing.art.final.doc)
-- **Author identification, idiolect, and linguistic uniqueness.** Malcolm Coulthard. *Applied linguistics* (2004) [[link]](https://publications.aston.ac.uk/id/eprint/1928/1/A_AppLing.art.final.doc)
 
 - **Ad-hoc authorship attribution competition.** Patrick Juola. *Proceedings of the Joint Conference of the Association for Computers and the Humanities and the Association for Literary and Linguistic Computing* (2004) [[link]](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=92292ca483b209122d614c54880ac46a3ac736a8)
 - **Lying words: Predicting deception from linguistic styles.** Matthew L Newman, James W Pennebaker, Diane S Berry, and Jane M Richards. *Personality and social psychology bulletin* (2003) [[link]](http://www1.cs.columbia.edu/~julia/papers/newmanetal2003.pdf)
@@ -254,6 +253,7 @@ The Table below present an overview of LLM-Generated Text Detectors.
 
 ### 2. LLM-generated Text Detection
 - **Paraphrasing evades detectors of ai-generated text, but retrieval is an effective defense.** Kalpesh Krishna, Yixiao Song, Marzena Karpinska, John Wieting, and Mohit Iyyer. *Advances in Neural Information Processing Systems* (2024) [[link]](https://proceedings.neurips.cc/paper_files/paper/2023/file/575c450013d0e99e4b0ecf82bd1afaa4-Paper-Conference.pdf)
+- **Adaptive ensembles of fine-tuned transformers for llm-generated text detection.** Zhixin Lai, Xuesheng Zhang, and Suiyao Chen. *arXiv preprint arXiv:2403.13335* (2024) [[link]](https://arxiv.org/pdf/2403.13335)
 - **ALISON: Fast and Effective Stylometric Authorship Obfuscation.** Eric Xing, Saranya Venkatraman, Thai Le, and Dongwon Lee. *arXiv preprint arXiv:2402.00835* (2024) [[link]](https://ojs.aaai.org/index.php/AAAI/article/download/29901/31575)
 - **Authorship obfuscation in multilingual machine-generated text detection.** Dominik Macko, Robert Moro, Adaku Uchendu, Ivan Srba, Jason Samuel Lucas, Michiharu Yamashita, Nafis Irtiza Tripto, Dongwon Lee, Jakub Simko, and Maria Bielikova. *arXiv preprint arXiv:2401.07867* (2024) [[link]](https://arxiv.org/pdf/2401.07867)
 - **On the Detectability of ChatGPT Content: Benchmarking, Methodology, and Evaluation through the Lens of Academic Writing.** Zeyan Liu, Zijun Yao, Fengjun Li, and Bo Luo. *No venue* (2024) [[link]](https://ui.adsabs.harvard.edu/abs/2023arXiv230605524L/abstract)
