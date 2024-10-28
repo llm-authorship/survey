@@ -252,6 +252,7 @@ The Table below present an overview of LLM-Generated Text Detectors.
 
 
 ### 2. LLM-generated Text Detection
+**Scalable watermarking for identifying large language model outputs.** Sumanth Dathathri, et al. *Nature 634.8035 (2024): 818-823* [[link]](https://www.nature.com/articles/s41586-024-08025-4.pdf)
 - **Paraphrasing evades detectors of ai-generated text, but retrieval is an effective defense.** Kalpesh Krishna, Yixiao Song, Marzena Karpinska, John Wieting, and Mohit Iyyer. *Advances in Neural Information Processing Systems* (2024) [[link]](https://proceedings.neurips.cc/paper_files/paper/2023/file/575c450013d0e99e4b0ecf82bd1afaa4-Paper-Conference.pdf)
 - **Adaptive ensembles of fine-tuned transformers for llm-generated text detection.** Zhixin Lai, Xuesheng Zhang, and Suiyao Chen. *arXiv preprint arXiv:2403.13335* (2024) [[link]](https://arxiv.org/pdf/2403.13335)
 - **ALISON: Fast and Effective Stylometric Authorship Obfuscation.** Eric Xing, Saranya Venkatraman, Thai Le, and Dongwon Lee. *arXiv preprint arXiv:2402.00835* (2024) [[link]](https://ojs.aaai.org/index.php/AAAI/article/download/29901/31575)
