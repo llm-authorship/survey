@@ -416,7 +416,7 @@ We would like to thank the researchers and practitioners whose work has contribu
 ---
 
 ## Contact
-For any questions or inquiries, please contact [bhuang15@hawk.iit.edu](mailto:bhuang15@hawk.iit.edu).
+For any questions or inquiries, please contact [Baixiang Huang](mailto:bhuang15@hawk.iit.edu) and [Kai Shu](mailto:kai.shu@emory.edu).
 
 ---
 By organizing and curating the extensive body of literature on authorship attribution, we hope this repository will be a valuable resource for researchers and practitioners in the field.
